@@ -21,7 +21,6 @@ const HeroMovie = ({
   const dispatch = useDispatch();
   const imageURL = `${IMAGE_ENPOINT}/${backdrop_path}`;
   const releaseYear = release_date?.substring(0, 4) || "N/A";
-  // const plot = `${overview.substring(0, 100)}...`;
 
   const addToWatchList = async () => {
     const response = await dispatch(fetchMovieById(Number(id)));
@@ -64,12 +63,14 @@ const HeroMovie = ({
             {title}
           </h1>
           <div className="text-md text-gray-400 mb-[.5rem] flex gap-[1rem] items-center">
-            <span className="font-bold">{releaseYear} </span>
+            <span className="rounded-sm text-[.7rem] font-bold uppercase bg-yellow-500 px-[4px] py-[1px] text-black mr-[.2rem]">
+              {media_type}
+            </span>
             <div className="flex items-center gap-[1px]">
               <FaStar className="inline-block mr-[.2rem] text-yellow-500" />
               <span className="font-bold">{vote_average}</span>
             </div>
-            <span className="font-bold">2ht 15mins </span>
+            <span className="font-bold">{releaseYear} </span>
           </div>
           <p className="text-gray-100 mb-[1rem] md:mb-[2rem] max-w-[40rem] md:text-lg line-clamp-2 md:line-clamp-4">
             {overview}

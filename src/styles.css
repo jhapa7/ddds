@@ -25,7 +25,7 @@ body {
 
 .player-wrapper {
   position: relative;
-  padding-top: 46.25%; /* 720 / 1280 = 0.5625 */
+  padding-top: 46.25%;
 }
 
 .react-player {
