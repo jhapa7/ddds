@@ -90,7 +90,7 @@ const Nav = () => {
         <input
           type="text"
           className="border-yellow-500 border-2 pl-[1.5rem] pr-[2.3rem] py-[.5rem] w-[20rem] rounded-full bg-transparent text-white text-xl placeholder:font-thin placeholder:text-lg placeholder:text-white"
-          placeholder="Search movies or series"
+          placeholder="Search movies or tv shows"
           value={query}
           onChange={(e) => {
             setQuery(e.target.value);
@@ -171,7 +171,7 @@ const Nav = () => {
               <input
                 type="text"
                 className="border-yellow-500 border-2 pl-[1.5rem] pr-[2.3rem] py-[.5rem] w-full rounded-lg bg-transparent text-white text-xl placeholder:font-thin placeholder:text-lg placeholder:text-white"
-                placeholder="Search movies or series"
+                placeholder="Search movies or tv shows"
                 value={query}
                 onChange={(e) => {
                   setQuery(e.target.value);
