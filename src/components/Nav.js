@@ -26,10 +26,6 @@ const Nav = () => {
   }, [location.pathname]);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  useEffect(() => {
     if (isSideNavOpen) {
       document.body.style.overflow = "hidden";
     } else {

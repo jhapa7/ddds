@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Error from "../components/Error";
 import Loader from "../components/Loader";
 import Movie from "../components/Movie";
@@ -13,6 +13,10 @@ const Movies = () => {
     topRatedError,
     topRatedMovies,
   } = useAppContext();
+
+  useEffect(() => {
+    document.title = "Movies | Cinemify";
+  }, []);
 
   if (popularError) {
     return <Error />;

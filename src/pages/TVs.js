@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Error from "../components/Error";
 import Loader from "../components/Loader";
 import TV from "../components/TV";
@@ -13,6 +13,10 @@ const TVs = () => {
     topRatedTVError,
     topRatedTVSeries,
   } = useAppContext();
+
+  useEffect(() => {
+    document.title = "TV Shows | Cinemify";
+  }, []);
 
   if (popularTVError) {
     return <Error />;

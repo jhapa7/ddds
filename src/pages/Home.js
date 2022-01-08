@@ -13,7 +13,7 @@ const Home = () => {
   const { loading } = useAppContext();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    document.title = "Home | Cinemify";
   }, []);
 
   if (loading) {

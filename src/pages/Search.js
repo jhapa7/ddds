@@ -42,6 +42,10 @@ const Search = () => {
     //eslint-disable-next-line
   }, [query]);
 
+  useEffect(() => {
+    document.title = `${query} | Cinemify`;
+  }, [query]);
+
   if (loading) {
     return (
       <div className="bg-slate-800 flex justify-center items-center h-[80vh]">

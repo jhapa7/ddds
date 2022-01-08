@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useFetch } from "../customHooks";
 import { useParams } from "react-router-dom";
 import NotFound from "./NotFound";
@@ -22,7 +22,11 @@ const TVInfo = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
   const URL = `${API_ENDPOINT}/tv/${id}?api_key=${API_KEY}`;
-  const { loading, error, data: tvs } = useFetch(URL);
+  const { loading, error, data: tv } = useFetch(URL);
+
+  useEffect(() => {
+    document.title = `${!loading ? tv.original_name : "TV Show"} | Cinemify`;
+  }, [loading, tv.original_name]);
 
   if (loading) {
     return (
@@ -36,7 +40,7 @@ const TVInfo = () => {
     return <h1>Error!!!</h1>;
   }
 
-  if (tvs.status_code === 34) {
+  if (tv.status_code === 34) {
     if (process.env.NODE_ENV === "production") {
       console.clear();
     }
@@ -87,7 +91,7 @@ const TVInfo = () => {
     number_of_seasons,
     homepage,
     networks,
-  } = tvs;
+  } = tv;
 
   const bgImageURL = `${IMAGE_ENDPOINT}/${backdrop_path}`;
   const posterURL = `${IMAGE_ENDPOINT}/${poster_path}`;

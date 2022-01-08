@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useFetch } from "../customHooks";
 import { useParams } from "react-router-dom";
 import NotFound from "./NotFound";
@@ -28,6 +28,10 @@ const MovieInfo = () => {
   const URL = `${API_ENDPOINT}/movie/${id}?api_key=${API_KEY}`;
   const { loading, error, data: movie } = useFetch(URL);
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    document.title = `${!loading ? movie.title : "Movie"} | Cinemify`;
+  }, [loading, movie.title]);
 
   if (loading) {
     return (
@@ -121,6 +125,7 @@ const MovieInfo = () => {
     setIsTrailerOpen(true);
     document.body.style.overflow = "hidden";
   };
+
   return (
     <>
       <div className="bg-zinc-900 lg:hidden">
