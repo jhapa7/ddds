@@ -8,7 +8,7 @@ const Footer = () => {
         <a href="https://github.com/sandipshiwakoti">
           <FaGithub className="text-3xl" />
         </a>
-        <a href="https://linkedin.com/sandipshiwakoti">
+        <a href="https://linkedin.com/in/sandip-shiwakoti-a88317208/">
           <FaLinkedin className="text-3xl" />
         </a>
       </div>
