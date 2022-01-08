@@ -20,7 +20,7 @@ const PopularMovies = () => {
 
   return (
     <>
-      <div className="p-[2rem]">
+      <div className="pb-[2rem]">
         <h1 className="text-2xl sm:text-3xl font-bold text-yellow-500 mb-[1.5rem]">
           Popular Movies
         </h1>

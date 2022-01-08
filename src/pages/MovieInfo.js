@@ -62,7 +62,6 @@ const MovieInfo = () => {
     status,
     homepage,
   } = movie;
-  console.log(movie);
 
   const releaseYear = release_date?.substring(0, 4) || "N/A";
   const bgImageURL = `${IMAGE_ENDPOINT}/${backdrop_path}`;
@@ -190,7 +189,7 @@ const MovieInfo = () => {
               </a>
             </div>
           </div>
-          <div class="flex flex-col xs:flex-row gap-3">
+          <div className="flex flex-col xs:flex-row gap-3">
             <div
               className="cursor-pointer text-center text-black font-bold bg-yellow-500 px-[1rem]  sm:px-[.5rem] py-[.5rem] rounded-md text-sm  hover:bg-white"
               onClick={openTrailer}
@@ -274,7 +273,7 @@ const MovieInfo = () => {
                   </a>
                 </div>
               </div>
-              <div class="flex flex-col xs:flex-row gap-3">
+              <div className="flex flex-col xs:flex-row gap-3">
                 <div
                   className="cursor-pointer text-black font-bold bg-yellow-500 px-[1.2rem] py-[.5rem] rounded-md text-md  hover:bg-white"
                   onClick={openTrailer}

@@ -20,7 +20,6 @@ const TVTrailer = ({
   const { loading, error, data: videos } = useFetch(URL);
 
   if (loading) {
-    console.log(loading);
     return <Loader />;
   }
 

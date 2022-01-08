@@ -50,7 +50,6 @@ export const TVSlice = createSlice({
     builder.addCase(addTV.rejected, (state, action) => {
       state.loading = false;
       state.error = action.payload.status_message;
-      // console.log(action.payload);
     });
   },
 });

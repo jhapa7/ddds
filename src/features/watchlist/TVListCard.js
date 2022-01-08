@@ -17,7 +17,6 @@ const TVListCard = ({
 }) => {
   const dispatch = useDispatch();
   const posterURL = `${IMAGE_ENDPOINT}/${poster_path}`;
-  console.log({ id, poster_path, original_name, first_air_date, vote_average });
 
   const removeFromWatchList = () => {
     dispatch(removeTV(id));
@@ -34,7 +33,7 @@ const TVListCard = ({
   return (
     <>
       <div className="text-white rounded-lg drop-shadow-2xl relative">
-        <div class="relative">
+        <div className="relative">
           <img
             src={poster_path ? posterURL : NoImage}
             alt={original_name}

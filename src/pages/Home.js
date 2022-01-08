@@ -31,12 +31,14 @@ const Home = () => {
   return (
     <>
       <Hero />
-      <TrendingMovies />
-      <TrendingTV />
-      <PopularMovies />
-      <PopularTV />
-      <TopRatedMovies />
-      <TopRatedTV />
+      <section className="p-[2rem]">
+        <TrendingMovies />
+        <TrendingTV />
+        <PopularMovies />
+        <PopularTV />
+        <TopRatedMovies />
+        <TopRatedTV />
+      </section>
     </>
   );
 };

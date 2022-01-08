@@ -89,7 +89,6 @@ const TVInfo = () => {
     networks,
   } = tvs;
 
-  // console.log(tv);
   const bgImageURL = `${IMAGE_ENDPOINT}/${backdrop_path}`;
   const posterURL = `${IMAGE_ENDPOINT}/${poster_path}`;
   const tvGenres = genres.map(({ name }) => name).join(", ") || "N/A";
@@ -123,7 +122,6 @@ const TVInfo = () => {
     setIsTrailerOpen(true);
     document.body.style.overflow = "hidden";
   };
-  console.log(tvs);
 
   return (
     <>
@@ -200,7 +198,7 @@ const TVInfo = () => {
               </a>
             </div>
           </div>
-          <div class="flex flex-col xs:flex-row gap-3">
+          <div className="flex flex-col xs:flex-row gap-3">
             <div
               className="cursor-pointer text-center text-black font-bold bg-yellow-500 px-[1rem]  sm:px-[.5rem] py-[.5rem] rounded-md text-sm  hover:bg-white"
               onClick={openTrailer}
@@ -291,7 +289,7 @@ const TVInfo = () => {
                   </a>
                 </div>
               </div>
-              <div class="flex flex-col xs:flex-row gap-3">
+              <div className="flex flex-col xs:flex-row gap-3">
                 <div
                   className="cursor-pointer text-black font-bold bg-yellow-500 px-[1.2rem] py-[.5rem] rounded-md text-md  hover:bg-white"
                   onClick={openTrailer}
@@ -327,52 +325,5 @@ const TVInfo = () => {
     </>
   );
 };
-
-//  <div className="bg-zinc-900 min-h-[80vh] overflow-hidden">
-//    <div style={bgImageCss}>
-//      <div className="md:flex gap-[4rem] p-[2rem] md:p-[4rem] h-full md:h-[80vh]">
-//        <img
-//          src={poster_path ? posterURL : NoImage}
-//          alt={original_name}
-//          className="h-[12rem] mb-[.5rem] md:mb-[2rem] sm:block md:h-full rounded-2xl drop-shadow-sm shadow-sm"
-//        />
-//        <div className="text-white">
-//          <h1 className="text-xl md:text-3xl font-bold md:mb-[.2rem]">
-//            {original_name}
-//            <span className="font-bold text-gray-400"></span>
-//          </h1>
-//          <div className=" text-sm md:text-md font-semibold text-gray-300">
-//            {tvGenres} | {formattedRuntime}
-//          </div>
-//          <div className="text-sm md:text-xl text-gray-400 md:mb-[.2rem]">
-//            ⭐<span className="font-bold">{vote_average}</span>
-//          </div>
-//          <p className=" text-sm block italic md:text-lg font-semibold text-gray-300 mb-[.3rem] md:mb-[1rem]">
-//            {tagline}
-//          </p>
-//          <h1 className="font-bold text:sm md:text-xl">Overview</h1>
-//          <p className="text-sm font-semibold md:text-md text-gray-200 md:tracking-wide md:leading-7 max-w-[40rem] my-[.2rem] md:my-[.8rem] line-clamp-6 lg:line-clamp-none">
-//            {overview}
-//          </p>
-//          <div class="grid grid-cols-3 gap-3">
-//            <div
-//              className="cursor-pointer text-black font-bold bg-yellow-500  px-[1.5rem] py-[.5rem] rounded-md text-sm md:text-base  hover:bg-white"
-//              onClick={openTrailer}
-//            >
-//              <FaPlay className="inline-block mr-[.4rem]" />
-//              <span>Watch trailer</span>
-//            </div>
-//            <div
-//              className="cursor-pointer text-black font-bold hover:bg-yellow-500  px-[1.5rem] py-[.5rem] rounded-md text-sm md:text-base  bg-white"
-//              onClick={addToWatchList}
-//            >
-//              <BsBookmarkHeartFill className="inline-block mr-[.4rem]" />
-//              <span>Add to watch list</span>
-//            </div>
-//          </div>
-//        </div>
-//      </div>
-//    </div>
-//  </div>;
 
 export default TVInfo;

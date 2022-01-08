@@ -33,7 +33,7 @@ const MovieListCard = ({
   return (
     <>
       <div className="text-white rounded-lg drop-shadow-2xl relative">
-        <div class="relative">
+        <div className="relative">
           <img
             src={poster_path ? posterURL : NoImage}
             alt={title}
