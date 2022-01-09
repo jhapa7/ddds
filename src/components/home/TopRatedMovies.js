@@ -32,7 +32,7 @@ const TopRatedMovies = () => {
               spaceBetween={30}
               slidesPerView={2}
               navigation
-              autoplay={{ delay: 3000, disableOnInteraction: false }}
+              autoplay={{ delay: 5000, disableOnInteraction: false }}
               mousewheel={{
                 forceToAxis: true,
               }}

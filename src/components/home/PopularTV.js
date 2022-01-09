@@ -30,7 +30,7 @@ const PopularTV = () => {
               modules={[Navigation, A11y, Mousewheel, Autoplay]}
               spaceBetween={30}
               slidesPerView={2}
-              autoplay={{ delay: 3000, disableOnInteraction: false }}
+              autoplay={{ delay: 5000, disableOnInteraction: false }}
               navigation
               mousewheel={{
                 forceToAxis: true,
