@@ -14,7 +14,7 @@ const Hero = () => {
         showIndicators={true}
         swipeable={true}
         showStatus={false}
-        // autoPlay={true}
+        autoPlay={true}
         emulateTouch={true}
       >
         {movies.results.slice(0, 7).map((movie, index) => {
